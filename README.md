@@ -14,59 +14,52 @@ This project provides:
 
 ---
 
-## Tech Stack Used
+## Tech Stack Used < br / >
 
--**Python** (Pandas, Numpy)
--**Bokeh** for visualization
--**Google Colab** for development
--**GitHub** for version control
+-**Python** (Pandas, Numpy) < br / >
+-**Bokeh** for visualization < br / >
+-**Google Colab** for development < br / >
+-**GitHub** for version control < br / >
 
 ---
 
 ## Architecture Diagram
 
-graph TD
-    A[CSV Dataset] --> B[Pathway Data Stream]
-    B --> C[Feature Engineering & Preprocessing]
-    C --> D1[Model 1: Linear Pricing]
-    C --> D2[Model 2: Demand-Based Pricing]
-    D1 --> E[Pricing Output]
-    D2 --> E
-    E --> F[Real-Time Bokeh Visualization]
+
 
 
   ---
 
-  ## Project Architecture & Workflow
+  ## Project Architecture & Workflow < br / >
 
 
-  ###1. Data Ingestion
-        Historical parking lot data (CSV) is loaded, including timestamps, occupancy, queue            length, vehicle type, traffic, and special event indicators.
+  ### 1. Data Ingestion< br / >
+        Historical parking lot data (CSV) is loaded, including timestamps, occupancy, queuelength, vehicle type, traffic, and special event indicators.< br / >
 
 
 
-  ###2. Feature Engineering
-        Categorical features (e.g., vehicle type, traffic condition) are mapped to numeric             values.
-     New features (e.g., occupancy ratio, demand score) are computed for use in pricing models.
+  ### 2. Feature Engineering  < br/>
+     Categorical features (e.g., vehicle type, traffic condition) are mapped to numeric values.< br / >
+     New features (e.g., occupancy ratio, demand score) are computed for use in pricing models.< br / >
 
-  ###3. Pricing Models
-####      Model 1: Baseline Linear Pricing
-          Calculates price as a linear function of occupancy ratio, bounded between minimum              and maximum values.
+  ### 3. Pricing Models< br / >
+####      Model 1: Baseline Linear Pricing< br / >
+          Calculates price as a linear function of occupancy ratio, bounded between minimum and maximum values.< br / >
 
-####      Model 2: Demand-Based Pricing
-          Computes a weighted sum of features (occupancy, queue, traffic, special day, vehicle           type), normalizes demand, and sets price accordingly.
-
-
-  ###4. Real-Time Processing
-        As each new data point arrives, the selected pricing model processes it instantly,             producing a new price for the relevant parking lot.
+####      Model 2: Demand-Based Pricing< br / >
+          Computes a weighted sum of features (occupancy, queue, traffic, special day, vehicle type), normalizes demand, and sets price accordingly.< br / >
 
 
-  ###5. Visualization
-        Bokeh is used to create real-time, interactive plots:
-        Price vs. time for each lot and model
-        Visualizations are embedded in the notebook for transparency and justification.
+  ### 4. Real-Time Processing< br / >
+        As each new data point arrives, the selected pricing model processes it instantly,producing a new price for the relevant parking lot.< br / >
 
-The notebook includes markdown explanations, assumptions, and model justifications for clarity and reproducibility.
+
+  ### 5. Visualization< br / >
+        Bokeh is used to create real-time, interactive plots:< br / >
+        Price vs. time for each lot and model< br / >
+        Visualizations are embedded in the notebook for transparency and justification.< br / >
+
+The notebook includes markdown explanations, assumptions, and model justifications for clarity and reproducibility.< br / >
 
   
 
