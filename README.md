@@ -60,7 +60,7 @@ This project provides:<br/>
 
    
   ### 4. Real-Time Processing<br/>
-   As each new data point arrives, the selected pricing model processes it instantly,producing a new price for the relevant parking lot.< br / >
+   As each new data point arrives, the selected pricing model processes it instantly,producing a new price for the relevant parking lot.</br/>
 
 
 
