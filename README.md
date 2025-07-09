@@ -27,7 +27,19 @@ This project provides:<br/>
 
 ---
 
-## Architecture Diagram
+## Architecture Diagram <br/>
+
+```mermaid
+graph TD
+    A[CSV Dataset] --> B[Pathway Data Stream]
+    B --> C[Feature Engineering & Preprocessing]
+    C --> D1[Model 1: Linear Pricing]
+    C --> D2[Model 2: Demand-Based Pricing]
+    D1 --> E1[Pricing Output]
+    D2 --> E2[Pricing Output]
+    E1 --> F1[Real-Time Bokeh Visualization]
+    E2 --> F2[Real-Time Bokeh Visualization]
+```
 
 
 
